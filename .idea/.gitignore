@@ -21,3 +21,6 @@ target/
 # IntelliJ
 .idea/
 *.iml
+
+application.properties
+persistence.xml
