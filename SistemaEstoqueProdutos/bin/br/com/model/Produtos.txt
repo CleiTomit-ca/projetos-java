@@ -1,0 +1,2 @@
+Notebook;Eletronicos;3;4500.0
+Camiseta;Roupas;10;89.0
