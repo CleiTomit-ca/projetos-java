@@ -1,0 +1,8 @@
+spring.application.name=GerenciadorFinaceiroPessoal
+
+spring.datasource.url=jdbc:mysql://localhost:3306/seuDataBase
+spring.datasource.username=seuUser
+spring.datasource.password=suaSenha
+
+spring.jpa.hibernte.dll-auto=update
+spring.jpa.show-sql=auto
