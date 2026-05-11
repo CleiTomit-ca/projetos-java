@@ -2,7 +2,17 @@ package br.com.FinaceiroPessoal.GerenciadorFinaceiroPessoal.model;
 
 import br.com.FinaceiroPessoal.GerenciadorFinaceiroPessoal.enums.CategoriasTransacoes;
 import jakarta.persistence.*;
+import jakarta.validation.constraints.NotBlank;
+import jakarta.validation.constraints.NotNull;
+import lombok.AllArgsConstructor;
+import lombok.Getter;
+import lombok.NoArgsConstructor;
+import lombok.Setter;
 
+@Getter
+@Setter
+@NoArgsConstructor
+@AllArgsConstructor
 @Entity
 public class Transacao {
 
@@ -10,37 +20,12 @@ public class Transacao {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
+    @NotBlank
     private String nome;
+
+    @NotNull
     private double preco;
 
     @Enumerated(EnumType.STRING)
     private CategoriasTransacoes categoriasTransacoes;
-
-    public Long getId() {
-        return id;
-    }
-
-    public String getNome() {
-        return nome;
-    }
-
-    public void setNome(String nome) {
-        this.nome = nome;
-    }
-
-    public double getPreco() {
-        return preco;
-    }
-
-    public void setPreco(double preco) {
-        this.preco = preco;
-    }
-
-    public CategoriasTransacoes getCategoriasTransacoes() {
-        return categoriasTransacoes;
-    }
-
-    public void setCategoriasTransacoes(CategoriasTransacoes categoriasTransacoes) {
-        this.categoriasTransacoes = categoriasTransacoes;
-    }
 }
